@@ -61,6 +61,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProgram.Designer.cs">
+      <DependentUpon>AddProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Course.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +76,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystemDeGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystemDeGestion.Designer.cs">
+      <DependentUpon>SystemDeGestion.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddProgram.resx">
+      <DependentUpon>AddProgram.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,6 +98,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SystemDeGestion.resx">
+      <DependentUpon>SystemDeGestion.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
