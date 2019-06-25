@@ -54,6 +54,7 @@ namespace ProjetFinal_CS_BourassaMarie
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
+            ListAllPrograms listProg = new ListAllPrograms();
           DialogResult result =  MessageBox.Show("Do you really want to delete " + comboBoxDeleteSelection.Text + " ?", "Attention!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (result == DialogResult.Yes)
@@ -70,6 +71,7 @@ namespace ProjetFinal_CS_BourassaMarie
             }
             MessageBox.Show("Deleted " + comboBoxDeleteSelection.Text + " Successfully");
             FillCombo();
+           
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

@@ -16,12 +16,32 @@ namespace ProjetFinal_CS_BourassaMarie
         public ListAllPrograms()
         {
             InitializeComponent();
-            reload();
         }
         SqlConnection mydbCon;
         SqlCommand command;
         SqlDataReader reader;
-        private void reload()
+      
+        private void ListAllPrograms_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'finalProjDBDataSet.Programs'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+         //   this.programsTableAdapter.Fill(this.finalProjDBDataSet.Programs);
+
+        }
+
+        private void dataGridViewPrograms_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SystemDeGestion addNew = new SystemDeGestion();
+            addNew.Show();
+
+        }
+
+        private void buttonListAll_Click(object sender, EventArgs e)
         {
 
             mydbCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=
@@ -34,28 +54,10 @@ namespace ProjetFinal_CS_BourassaMarie
             reader = command.ExecuteReader();
             while (reader.Read())
             {
-                string code = reader["CodeProgram"].ToString();
-                string name = reader["NameProgram"].ToString();
-                string course1 = reader["Course1"].ToString();
-                string course2 = reader["Course2"].ToString();
-                string course3 = reader["Course3"].ToString();
-                string course4 = reader["Course4"].ToString();
-                string course5 = reader["Course5"].ToString();
-                dataGridViewPrograms.Rows.Add(code, name, course1, course2, course3, course4, course5 );
+                dataGridView1.Rows.Add(reader["CodeProgram"], reader["NameProgram"], reader["Course1"], reader["Course2"], reader["Course3"], reader["Course4"], reader["Course5"]);
             }
             mydbCon.Close();
-            mydbCon.Close();
-            
-        }
-        private void ListAllPrograms_Load(object sender, EventArgs e)
-        {
-            // TODO: cette ligne de code charge les données dans la table 'finalProjDBDataSet.Programs'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.programsTableAdapter.Fill(this.finalProjDBDataSet.Programs);
 
-        }
-
-        private void dataGridViewPrograms_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
     }

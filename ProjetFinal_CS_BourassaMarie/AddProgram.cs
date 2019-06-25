@@ -52,11 +52,8 @@ namespace ProjetFinal_CS_BourassaMarie
             reader = command.ExecuteReader();
             while (reader.Read())
             {
-                labelCombo1.Text = reader["CodeCours"].ToString();
-                labelCombo2.Text = reader["CodeCours"].ToString();
-                labelCombo3.Text = reader["CodeCours"].ToString();
-                labelCombo4.Text = reader["CodeCours"].ToString();
-                labelCombo5.Text = reader["CodeCours"].ToString();
+                label.Text = reader["CodeCours"].ToString();
+                label.Visible = true;
             }
             mydbCon.Close();
 
@@ -169,29 +166,33 @@ namespace ProjetFinal_CS_BourassaMarie
 
                     command.Dispose();
 
-                    if (labelCombo2.Text != null)
+                    if (labelCombo2.Text != "")
                     {
                         command = new SqlCommand("UPDATE Programs SET Course2 = @c2 WHERE CodeProgram = @cp ", mydbCon);
                         command.Parameters.AddWithValue("c2", labelCombo2.Text);
                         command.Parameters.AddWithValue("cp", textBoxProgramCode.Text);
+                        command.ExecuteNonQuery();
+                        command.Dispose();
                     }
-                    command.ExecuteNonQuery();
-                    command.Dispose();
+
 
                     if (labelCombo3.Text != "")
                     {
                         command = new SqlCommand("UPDATE Programs SET Course3 = @c3 WHERE CodeProgram = @cp ", mydbCon);
                         command.Parameters.AddWithValue("c3", labelCombo3.Text);
                         command.Parameters.AddWithValue("cp", textBoxProgramCode.Text);
+                        command.ExecuteNonQuery();
+                        command.Dispose();
                     }
-                    command.ExecuteNonQuery();
-                    command.Dispose();
+
 
                     if (labelCombo4.Text != "")
                     {
                         command = new SqlCommand("UPDATE Programs SET Course4 = @c4 WHERE CodeProgram = @cp ", mydbCon);
                         command.Parameters.AddWithValue("c4", labelCombo4.Text);
                         command.Parameters.AddWithValue("cp", textBoxProgramCode.Text);
+                        command.ExecuteNonQuery();
+                        command.Dispose();
                     }
 
                     if (labelCombo5.Text != "")
@@ -199,9 +200,10 @@ namespace ProjetFinal_CS_BourassaMarie
                         command = new SqlCommand("UPDATE Programs SET Course5 = @c5 WHERE CodeProgram = @cp ", mydbCon);
                         command.Parameters.AddWithValue("c5", labelCombo5.Text);
                         command.Parameters.AddWithValue("cp", textBoxProgramCode.Text);
+                        command.ExecuteNonQuery();
+                        command.Dispose();
                     }
-                    command.ExecuteNonQuery();
-                    command.Dispose();
+
 
                     mydbCon.Close();
                     MessageBox.Show("Program Successfully Inserted");
