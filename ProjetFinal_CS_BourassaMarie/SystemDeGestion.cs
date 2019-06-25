@@ -40,5 +40,12 @@ namespace ProjetFinal_CS_BourassaMarie
             DeleteProgram del = new DeleteProgram();
             del.Show();
         }
+
+        private void menuItemListPrograms_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ListAllPrograms list = new ListAllPrograms();
+            list.Show();
+        }
     }
 }

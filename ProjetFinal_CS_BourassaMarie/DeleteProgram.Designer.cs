@@ -31,6 +31,7 @@
             this.comboBoxDeleteSelection = new System.Windows.Forms.ComboBox();
             this.labelDeleteSelection = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
+            this.buttonBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // comboBoxDeleteSelection
@@ -58,7 +59,7 @@
             // 
             this.buttonDelete.Enabled = false;
             this.buttonDelete.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(116, 199);
+            this.buttonDelete.Location = new System.Drawing.Point(172, 206);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(75, 27);
             this.buttonDelete.TabIndex = 2;
@@ -66,11 +67,23 @@
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
+            // buttonBack
+            // 
+            this.buttonBack.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBack.Location = new System.Drawing.Point(66, 206);
+            this.buttonBack.Name = "buttonBack";
+            this.buttonBack.Size = new System.Drawing.Size(75, 27);
+            this.buttonBack.TabIndex = 3;
+            this.buttonBack.Text = "Back";
+            this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
             // DeleteProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.labelDeleteSelection);
             this.Controls.Add(this.comboBoxDeleteSelection);
@@ -87,5 +100,6 @@
         private System.Windows.Forms.ComboBox comboBoxDeleteSelection;
         private System.Windows.Forms.Label labelDeleteSelection;
         private System.Windows.Forms.Button buttonDelete;
+        private System.Windows.Forms.Button buttonBack;
     }
 }

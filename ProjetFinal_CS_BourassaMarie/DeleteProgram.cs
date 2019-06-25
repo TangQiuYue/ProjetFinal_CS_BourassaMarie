@@ -71,5 +71,12 @@ namespace ProjetFinal_CS_BourassaMarie
             MessageBox.Show("Deleted " + comboBoxDeleteSelection.Text + " Successfully");
             FillCombo();
         }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SystemDeGestion addNew = new SystemDeGestion();
+            addNew.Show();
+        }
     }
 }

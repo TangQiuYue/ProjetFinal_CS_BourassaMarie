@@ -74,6 +74,17 @@
     <Compile Include="DeleteProgram.Designer.cs">
       <DependentUpon>DeleteProgram.cs</DependentUpon>
     </Compile>
+    <Compile Include="FinalProjDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalProjDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ListAllPrograms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListAllPrograms.Designer.cs">
+      <DependentUpon>ListAllPrograms.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +105,9 @@
     <EmbeddedResource Include="DeleteProgram.resx">
       <DependentUpon>DeleteProgram.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListAllPrograms.resx">
+      <DependentUpon>ListAllPrograms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +124,17 @@
     <EmbeddedResource Include="SystemDeGestion.resx">
       <DependentUpon>SystemDeGestion.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="FinalProjDBDataSet.xsc">
+      <DependentUpon>FinalProjDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FinalProjDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalProjDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalProjDBDataSet.xss">
+      <DependentUpon>FinalProjDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

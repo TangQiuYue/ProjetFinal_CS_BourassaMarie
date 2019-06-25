@@ -32,3 +32,4 @@ C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMa
 C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\obj\Debug\ProjetFinal_CS_BourassaMarie.SystemDeGestion.resources
 C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\obj\Debug\ProjetFinal_CS_BourassaMarie.AddProgram.resources
 C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\obj\Debug\ProjetFinal_CS_BourassaMarie.DeleteProgram.resources
+C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\obj\Debug\ProjetFinal_CS_BourassaMarie.ListAllPrograms.resources

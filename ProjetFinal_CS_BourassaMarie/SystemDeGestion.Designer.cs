@@ -91,6 +91,7 @@
             this.menuItemListPrograms.Name = "menuItemListPrograms";
             this.menuItemListPrograms.Size = new System.Drawing.Size(161, 22);
             this.menuItemListPrograms.Text = "List all programs";
+            this.menuItemListPrograms.Click += new System.EventHandler(this.menuItemListPrograms_Click);
             // 
             // menuItemStudent
             // 

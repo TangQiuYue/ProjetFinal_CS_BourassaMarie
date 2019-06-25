@@ -49,9 +49,27 @@ namespace ProjetFinal_CS_BourassaMarie
             command.Parameters.AddWithValue("cd", combobox.Text);
 
 
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                labelCombo1.Text = reader["CodeCours"].ToString();
+                labelCombo2.Text = reader["CodeCours"].ToString();
+                labelCombo3.Text = reader["CodeCours"].ToString();
+                labelCombo4.Text = reader["CodeCours"].ToString();
+                labelCombo5.Text = reader["CodeCours"].ToString();
+            }
+            mydbCon.Close();
+
+
+
         }
         void FillCombo()
         {
+            comboBoxCours1.Items.Clear();
+            comboBoxCours2.Items.Clear();
+            comboBoxCours3.Items.Clear();
+            comboBoxCours4.Items.Clear();
+            comboBoxCours5.Items.Clear();
             mydbCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=
             C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
             Integrated Security=True");
@@ -186,13 +204,15 @@ namespace ProjetFinal_CS_BourassaMarie
                     command.Dispose();
 
                     mydbCon.Close();
-                }catch(Exception ex)
+                    MessageBox.Show("Program Successfully Inserted");
+                }
+                catch(Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Warning!",MessageBoxButtons.OK ,MessageBoxIcon.Error);
                 }
             }
 
-            MessageBox.Show("Program Successfully Inserted");
+         
         }
 
         private void comboBoxCours1_SelectedIndexChanged(object sender, EventArgs e)
@@ -222,6 +242,11 @@ namespace ProjetFinal_CS_BourassaMarie
 
         private void buttonAddNewCourse_Click(object sender, EventArgs e)
         {
+            comboBoxCours1.Text = "";
+            comboBoxCours2.Text = "";
+            comboBoxCours3.Text = "";
+            comboBoxCours4.Text = "";
+            comboBoxCours5.Text = "";
             comboBoxCours1.Visible = false;
             comboBoxCours2.Visible = false;
             comboBoxCours3.Visible = false;
