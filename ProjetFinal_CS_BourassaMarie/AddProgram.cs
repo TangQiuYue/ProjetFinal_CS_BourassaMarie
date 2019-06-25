@@ -48,12 +48,7 @@ namespace ProjetFinal_CS_BourassaMarie
             command = new SqlCommand("SELECT CodeCours FROM Cours where NameCourse=@cd", mydbCon);
             command.Parameters.AddWithValue("cd", combobox.Text);
 
-            reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                label.Text = reader["CodeCours"].ToString();
-            }
-            label.Visible = true;
+
         }
         void FillCombo()
         {

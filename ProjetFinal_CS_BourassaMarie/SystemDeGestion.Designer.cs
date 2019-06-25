@@ -84,6 +84,7 @@
             this.menuItemDeleteProgram.Name = "menuItemDeleteProgram";
             this.menuItemDeleteProgram.Size = new System.Drawing.Size(161, 22);
             this.menuItemDeleteProgram.Text = "Delete program";
+            this.menuItemDeleteProgram.Click += new System.EventHandler(this.menuItemDeleteProgram_Click);
             // 
             // menuItemListPrograms
             // 
