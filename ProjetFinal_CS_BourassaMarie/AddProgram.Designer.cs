@@ -169,7 +169,7 @@
             this.textBoxProgramCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxProgramCode.Location = new System.Drawing.Point(151, 46);
             this.textBoxProgramCode.Name = "textBoxProgramCode";
-            this.textBoxProgramCode.Size = new System.Drawing.Size(121, 27);
+            this.textBoxProgramCode.Size = new System.Drawing.Size(143, 27);
             this.textBoxProgramCode.TabIndex = 8;
             // 
             // textBoxProgramName
@@ -177,7 +177,7 @@
             this.textBoxProgramName.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxProgramName.Location = new System.Drawing.Point(151, 85);
             this.textBoxProgramName.Name = "textBoxProgramName";
-            this.textBoxProgramName.Size = new System.Drawing.Size(121, 27);
+            this.textBoxProgramName.Size = new System.Drawing.Size(143, 27);
             this.textBoxProgramName.TabIndex = 9;
             // 
             // comboBoxCours1
@@ -186,7 +186,7 @@
             this.comboBoxCours1.FormattingEnabled = true;
             this.comboBoxCours1.Location = new System.Drawing.Point(151, 143);
             this.comboBoxCours1.Name = "comboBoxCours1";
-            this.comboBoxCours1.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxCours1.Size = new System.Drawing.Size(143, 27);
             this.comboBoxCours1.TabIndex = 10;
             this.comboBoxCours1.SelectedIndexChanged += new System.EventHandler(this.comboBoxCours1_SelectedIndexChanged);
             // 
@@ -196,7 +196,7 @@
             this.comboBoxCours2.FormattingEnabled = true;
             this.comboBoxCours2.Location = new System.Drawing.Point(151, 183);
             this.comboBoxCours2.Name = "comboBoxCours2";
-            this.comboBoxCours2.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxCours2.Size = new System.Drawing.Size(143, 27);
             this.comboBoxCours2.TabIndex = 11;
             this.comboBoxCours2.SelectedIndexChanged += new System.EventHandler(this.comboBoxCours2_SelectedIndexChanged);
             // 
@@ -206,7 +206,7 @@
             this.comboBoxCours3.FormattingEnabled = true;
             this.comboBoxCours3.Location = new System.Drawing.Point(151, 222);
             this.comboBoxCours3.Name = "comboBoxCours3";
-            this.comboBoxCours3.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxCours3.Size = new System.Drawing.Size(143, 27);
             this.comboBoxCours3.TabIndex = 12;
             this.comboBoxCours3.SelectedIndexChanged += new System.EventHandler(this.comboBoxCours3_SelectedIndexChanged);
             // 
@@ -216,7 +216,7 @@
             this.comboBoxCours4.FormattingEnabled = true;
             this.comboBoxCours4.Location = new System.Drawing.Point(151, 260);
             this.comboBoxCours4.Name = "comboBoxCours4";
-            this.comboBoxCours4.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxCours4.Size = new System.Drawing.Size(143, 27);
             this.comboBoxCours4.TabIndex = 13;
             this.comboBoxCours4.SelectedIndexChanged += new System.EventHandler(this.comboBoxCours4_SelectedIndexChanged);
             // 
@@ -226,7 +226,7 @@
             this.comboBoxCours5.FormattingEnabled = true;
             this.comboBoxCours5.Location = new System.Drawing.Point(151, 297);
             this.comboBoxCours5.Name = "comboBoxCours5";
-            this.comboBoxCours5.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxCours5.Size = new System.Drawing.Size(143, 27);
             this.comboBoxCours5.TabIndex = 14;
             this.comboBoxCours5.SelectedIndexChanged += new System.EventHandler(this.comboBoxCours5_SelectedIndexChanged);
             // 

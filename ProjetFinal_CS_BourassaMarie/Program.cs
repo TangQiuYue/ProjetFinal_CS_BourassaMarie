@@ -16,7 +16,7 @@ namespace ProjetFinal_CS_BourassaMarie
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DeleteProgram());
+            Application.Run(new AddStudents());
         }
     }
 }
