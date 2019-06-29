@@ -34,3 +34,5 @@ C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMa
 C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\obj\Debug\ProjetFinal_CS_BourassaMarie.DeleteProgram.resources
 C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\obj\Debug\ProjetFinal_CS_BourassaMarie.ListAllPrograms.resources
 C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\obj\Debug\ProjetFinal_CS_BourassaMarie.AddStudents.resources
+C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\obj\Debug\ProjetFinal_CS_BourassaMarie.DeleteStudent.resources
+C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\obj\Debug\ProjetFinal_CS_BourassaMarie.ListStudents.resources

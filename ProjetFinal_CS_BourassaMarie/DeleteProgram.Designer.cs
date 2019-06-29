@@ -89,7 +89,6 @@
             this.Controls.Add(this.comboBoxDeleteSelection);
             this.Name = "DeleteProgram";
             this.Text = "DeleteProgram";
-            this.Load += new System.EventHandler(this.DeleteProgram_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -20,13 +20,6 @@ namespace ProjetFinal_CS_BourassaMarie
         SqlConnection mydbCon;
         SqlCommand command;
         SqlDataReader reader;
-      
-        private void ListAllPrograms_Load(object sender, EventArgs e)
-        {
-            // TODO: cette ligne de code charge les données dans la table 'finalProjDBDataSet.Programs'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-         //   this.programsTableAdapter.Fill(this.finalProjDBDataSet.Programs);
-
-        }
 
         private void dataGridViewPrograms_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -36,8 +29,6 @@ namespace ProjetFinal_CS_BourassaMarie
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SystemDeGestion addNew = new SystemDeGestion();
-            addNew.Show();
 
         }
 

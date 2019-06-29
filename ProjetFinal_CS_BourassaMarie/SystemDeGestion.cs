@@ -17,35 +17,55 @@ namespace ProjetFinal_CS_BourassaMarie
             InitializeComponent();
         }
 
-        private void MenuItemQuit_Click(object sender, EventArgs e)
+        private void addANewProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           DialogResult result = MessageBox.Show("Do you really want to quit this program?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            AddProgram addNew = new AddProgram();
+            addNew.ShowDialog();
+        }
+
+        private void deleteAProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteProgram del = new DeleteProgram();
+            del.ShowDialog();
+        }
+
+        private void listAllProgramsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListAllPrograms listProg = new ListAllPrograms();
+            listProg.ShowDialog();
+        }
+
+        private void addANewStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddStudents addStudent = new AddStudents();
+            addStudent.ShowDialog();
+        }
+
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you really want to quit this program?", "Attention", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Goodbye!", "Goodbye", MessageBoxButtons.OK ,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Goodbye!", "Goodbye", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Close();
             }
         }
 
-        private void menuItemAddProgram_Click(object sender, EventArgs e)
+        private void SystemDeGestion_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
-            AddProgram addNew = new AddProgram();
-            addNew.Show();
+          
         }
 
-        private void menuItemDeleteProgram_Click(object sender, EventArgs e)
+        private void deleteAStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            DeleteProgram del = new DeleteProgram();
-            del.Show();
+            DeleteStudent delStudent = new DeleteStudent();
+            delStudent.ShowDialog();
         }
 
-        private void menuItemListPrograms_Click(object sender, EventArgs e)
+        private void listStudentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            ListAllPrograms list = new ListAllPrograms();
-            list.Show();
+            ListStudents listStudents = new ListStudents();
+            listStudents.ShowDialog();
         }
     }
 }

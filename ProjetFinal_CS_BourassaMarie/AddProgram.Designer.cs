@@ -413,7 +413,6 @@
             this.Controls.Add(this.buttonAdd);
             this.Name = "AddProgram";
             this.Text = "AddProgram";
-            this.Load += new System.EventHandler(this.AddProgram_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

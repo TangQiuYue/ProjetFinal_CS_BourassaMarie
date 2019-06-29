@@ -144,7 +144,6 @@
             this.Controls.Add(this.buttonListAll);
             this.Name = "ListAllPrograms";
             this.Text = "ListAllPrograms";
-            this.Load += new System.EventHandler(this.ListAllPrograms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.programsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.finalProjDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

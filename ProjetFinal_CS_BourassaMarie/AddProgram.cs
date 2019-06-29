@@ -17,9 +17,11 @@ namespace ProjetFinal_CS_BourassaMarie
         SqlCommand command;
         SqlDataReader reader;
 
-        private void AddProgram_Load(object sender, EventArgs e)
+        void connect()
         {
-
+            mydbCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=
+            C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
+            Integrated Security=True");
         }
 
         void renderNull()
@@ -40,9 +42,7 @@ namespace ProjetFinal_CS_BourassaMarie
 
         void fillLabel(ComboBox combobox, Label label)
         {
-            mydbCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=
-            C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
-            Integrated Security=True");
+            connect();
             mydbCon.Open();
 
             command = new SqlCommand("SELECT CodeCours FROM Cours where NameCourse=@cd", mydbCon);
@@ -57,8 +57,6 @@ namespace ProjetFinal_CS_BourassaMarie
             }
             mydbCon.Close();
 
-
-
         }
         void FillCombo()
         {
@@ -67,9 +65,7 @@ namespace ProjetFinal_CS_BourassaMarie
             comboBoxCours3.Items.Clear();
             comboBoxCours4.Items.Clear();
             comboBoxCours5.Items.Clear();
-            mydbCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=
-            C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
-            Integrated Security=True");
+            connect();
             mydbCon.Open();
 
             command = new SqlCommand("SELECT * FROM Cours", mydbCon);
@@ -88,6 +84,7 @@ namespace ProjetFinal_CS_BourassaMarie
         }
         void clearAfterAdd()
         {
+             renderNull();
              textBoxCourseCode.Text = "";
              textBoxCourseName.Text = "";
              textBoxHours.Text = "" ;
@@ -151,9 +148,7 @@ namespace ProjetFinal_CS_BourassaMarie
             {
                 try
                 {
-                    mydbCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=
-            C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
-            Integrated Security=True");
+                    connect();
                     mydbCon.Open();
 
                     command = new SqlCommand("Insert into Programs (CodeProgram, NameProgram, Course1)" +
@@ -208,9 +203,17 @@ namespace ProjetFinal_CS_BourassaMarie
                     mydbCon.Close();
                     MessageBox.Show("Program Successfully Inserted");
                 }
-                catch(Exception ex)
+                catch (SqlException ex)
                 {
-                    MessageBox.Show(ex.Message, "Warning!",MessageBoxButtons.OK ,MessageBoxIcon.Error);
+                    if (ex.Number == 2627)
+                    {
+                        MessageBox.Show("This Program code already exists. \nPlease change the code to make it unique.");
+                    }
+                    else
+                    {
+                        MessageBox.Show(ex.Message, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        mydbCon.Close();
+                    }
                 }
             }
 
@@ -244,6 +247,7 @@ namespace ProjetFinal_CS_BourassaMarie
 
         private void buttonAddNewCourse_Click(object sender, EventArgs e)
         {
+            renderNull();
             comboBoxCours1.Text = "";
             comboBoxCours2.Text = "";
             comboBoxCours3.Text = "";
@@ -270,9 +274,7 @@ namespace ProjetFinal_CS_BourassaMarie
         {
             try
             {
-                mydbCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=
-            C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
-            Integrated Security=True");
+                connect();
                 mydbCon.Open();
 
                 command = new SqlCommand("Insert into Cours (CodeCours, NameCourse, HoursCourse)" +
@@ -282,23 +284,29 @@ namespace ProjetFinal_CS_BourassaMarie
                 command.Parameters.AddWithValue("c1", textBoxHours.Text);
                 command.ExecuteNonQuery();
                 command.Dispose();
+                MessageBox.Show("Course Successfully Inserted");
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show(ex.Message, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (ex.Number == 2627)
+                {
+                    MessageBox.Show("This course code already exists. \nPlease change the code to make it unique.");
+                }
+                else
+                {
+                    MessageBox.Show(ex.Message, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    mydbCon.Close();
+                }
             }
-            MessageBox.Show("Course Successfully Inserted");
             clearAfterAdd();
             FillCombo();
-
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            SystemDeGestion addNew = new SystemDeGestion();
-            addNew.Show();
 
         }
+
     }
 }

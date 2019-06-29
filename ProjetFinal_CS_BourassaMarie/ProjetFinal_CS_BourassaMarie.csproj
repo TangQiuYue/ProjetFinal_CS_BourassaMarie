@@ -73,12 +73,17 @@
     <Compile Include="AddStudents.Designer.cs">
       <DependentUpon>AddStudents.cs</DependentUpon>
     </Compile>
-    <Compile Include="Course.cs" />
     <Compile Include="DeleteProgram.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DeleteProgram.Designer.cs">
       <DependentUpon>DeleteProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteStudent.Designer.cs">
+      <DependentUpon>DeleteStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="FinalProjDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -90,6 +95,12 @@
     </Compile>
     <Compile Include="ListAllPrograms.Designer.cs">
       <DependentUpon>ListAllPrograms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListStudents.Designer.cs">
+      <DependentUpon>ListStudents.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -114,8 +125,14 @@
     <EmbeddedResource Include="DeleteProgram.resx">
       <DependentUpon>DeleteProgram.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStudent.resx">
+      <DependentUpon>DeleteStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListAllPrograms.resx">
       <DependentUpon>ListAllPrograms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListStudents.resx">
+      <DependentUpon>ListStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

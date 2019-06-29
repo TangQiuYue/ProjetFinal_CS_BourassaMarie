@@ -45,6 +45,9 @@
             this.buttonAddStudent = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.textBoxPermanentCode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxProgs = new System.Windows.Forms.ComboBox();
+            this.labelProgramCode = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelNewStudentForm
@@ -84,7 +87,6 @@
             this.labelAddress.Size = new System.Drawing.Size(63, 19);
             this.labelAddress.TabIndex = 10;
             this.labelAddress.Text = "Address";
-            this.labelAddress.Click += new System.EventHandler(this.label2_Click);
             // 
             // labelTelNum
             // 
@@ -146,6 +148,8 @@
             this.dateTimePickerDoB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDoB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerDoB.Location = new System.Drawing.Point(155, 164);
+            this.dateTimePickerDoB.MaxDate = new System.DateTime(2019, 12, 25, 23, 59, 59, 0);
+            this.dateTimePickerDoB.MinDate = new System.DateTime(1940, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerDoB.Name = "dateTimePickerDoB";
             this.dateTimePickerDoB.Size = new System.Drawing.Size(176, 27);
             this.dateTimePickerDoB.TabIndex = 6;
@@ -174,33 +178,36 @@
             // buttonCancel
             // 
             this.buttonCancel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(508, 293);
+            this.buttonCancel.Location = new System.Drawing.Point(508, 340);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 32);
             this.buttonCancel.TabIndex = 14;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonAddStudent
             // 
             this.buttonAddStudent.Enabled = false;
             this.buttonAddStudent.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddStudent.Location = new System.Drawing.Point(542, 206);
+            this.buttonAddStudent.Location = new System.Drawing.Point(547, 284);
             this.buttonAddStudent.Name = "buttonAddStudent";
             this.buttonAddStudent.Size = new System.Drawing.Size(123, 36);
             this.buttonAddStudent.TabIndex = 13;
             this.buttonAddStudent.Text = "Add Student";
             this.buttonAddStudent.UseVisualStyleBackColor = true;
+            this.buttonAddStudent.Click += new System.EventHandler(this.buttonAddStudent_Click);
             // 
             // buttonBack
             // 
             this.buttonBack.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Location = new System.Drawing.Point(634, 293);
+            this.buttonBack.Location = new System.Drawing.Point(634, 340);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 32);
             this.buttonBack.TabIndex = 15;
             this.buttonBack.Text = "Back";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // textBoxPermanentCode
             // 
@@ -211,11 +218,44 @@
             this.textBoxPermanentCode.TabIndex = 16;
             this.textBoxPermanentCode.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(362, 210);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 19);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Program";
+            // 
+            // comboBoxProgs
+            // 
+            this.comboBoxProgs.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxProgs.FormattingEnabled = true;
+            this.comboBoxProgs.Location = new System.Drawing.Point(508, 211);
+            this.comboBoxProgs.Name = "comboBoxProgs";
+            this.comboBoxProgs.Size = new System.Drawing.Size(187, 27);
+            this.comboBoxProgs.TabIndex = 18;
+            this.comboBoxProgs.SelectedIndexChanged += new System.EventHandler(this.comboBoxProgs_SelectedIndexChanged);
+            // 
+            // labelProgramCode
+            // 
+            this.labelProgramCode.AutoSize = true;
+            this.labelProgramCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProgramCode.Location = new System.Drawing.Point(504, 250);
+            this.labelProgramCode.Name = "labelProgramCode";
+            this.labelProgramCode.Size = new System.Drawing.Size(0, 19);
+            this.labelProgramCode.TabIndex = 19;
+            this.labelProgramCode.Visible = false;
+            // 
             // AddStudents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 337);
+            this.ClientSize = new System.Drawing.Size(721, 384);
+            this.Controls.Add(this.labelProgramCode);
+            this.Controls.Add(this.comboBoxProgs);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxPermanentCode);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonAddStudent);
@@ -235,6 +275,7 @@
             this.Controls.Add(this.labelNewStudentForm);
             this.Name = "AddStudents";
             this.Text = "AddStudents";
+            this.Load += new System.EventHandler(this.AddStudents_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -259,5 +300,8 @@
         private System.Windows.Forms.Button buttonAddStudent;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.TextBox textBoxPermanentCode;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxProgs;
+        private System.Windows.Forms.Label labelProgramCode;
     }
 }
