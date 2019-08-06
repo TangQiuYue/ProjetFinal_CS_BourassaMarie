@@ -78,5 +78,30 @@ namespace ProjetFinal_CS_BourassaMarie
                 this.Close();
             }
         }
+
+        private void labelPassword_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelLogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picBoxLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

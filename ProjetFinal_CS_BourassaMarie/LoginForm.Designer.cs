@@ -48,6 +48,7 @@
             this.picBoxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxLogin.TabIndex = 0;
             this.picBoxLogin.TabStop = false;
+            this.picBoxLogin.Click += new System.EventHandler(this.picBoxLogin_Click);
             // 
             // textBoxUsername
             // 
@@ -89,6 +90,7 @@
             this.buttonCancel.TabIndex = 4;
             this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // labelLogin
             // 
@@ -101,6 +103,7 @@
             this.labelLogin.Size = new System.Drawing.Size(46, 19);
             this.labelLogin.TabIndex = 5;
             this.labelLogin.Text = "Login";
+            this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
             // 
             // labelPassword
             // 
@@ -113,6 +116,7 @@
             this.labelPassword.Size = new System.Drawing.Size(74, 19);
             this.labelPassword.TabIndex = 6;
             this.labelPassword.Text = "Password";
+            this.labelPassword.Click += new System.EventHandler(this.labelPassword_Click);
             // 
             // labelWelcome
             // 
@@ -125,6 +129,7 @@
             this.labelWelcome.TabIndex = 7;
             this.labelWelcome.Text = "Bienvenue au \r\nSystem de Gestion Étudiants\r\nÉcole Linguistica\r\n";
             this.labelWelcome.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelWelcome.Click += new System.EventHandler(this.labelWelcome_Click);
             // 
             // LoginForm
             // 
