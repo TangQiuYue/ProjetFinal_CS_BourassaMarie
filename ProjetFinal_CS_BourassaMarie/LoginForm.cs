@@ -44,12 +44,13 @@ namespace ProjetFinal_CS_BourassaMarie
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
-
-            command = new SqlCommand("SELECT * FROM LoginInfo WHERE Username =@cd AND Password =@pw", mydbConnection);
-            command.Parameters.AddWithValue("cd", textBoxUsername.Text);
-            command.Parameters.AddWithValue("pw", textBoxPassword.Text);
-            command.Connection = mydbConnection;
-            mydbConnection.Open();
+            try
+            {
+                command = new SqlCommand("SELECT * FROM LoginInfo WHERE Username =@cd AND Password =@pw", mydbConnection);
+                command.Parameters.AddWithValue("cd", textBoxUsername.Text);
+                command.Parameters.AddWithValue("pw", textBoxPassword.Text);
+                command.Connection = mydbConnection;
+                mydbConnection.Open();
 
             DataSet ds = new DataSet();
             SqlDataAdapter da = new SqlDataAdapter(command);
@@ -75,6 +76,12 @@ namespace ProjetFinal_CS_BourassaMarie
             if (count == 3)
             {
                 MessageBox.Show("Please contact the administration. \n\n\nGoodBye!", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("We could not connect to the database, please contact the administrator", "ATTENTION", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
         }

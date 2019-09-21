@@ -44,7 +44,7 @@ namespace ProjetFinal_CS_BourassaMarie
         private void DeleteStudent_Load(object sender, EventArgs e)
         {
             mydbCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=
-            C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
+            C:\Users\TQY_06\Documents\third semester\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
             Integrated Security=True");
         }
 
