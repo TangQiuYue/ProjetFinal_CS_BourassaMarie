@@ -17,6 +17,8 @@ namespace ProjetFinal_CS_BourassaMarie
         public LoginForm()
         {
             InitializeComponent();
+            textBoxUsername.Text = "Enter Username";
+            textBoxPassword.Text = "Enter Password";
         }
         SqlConnection mydbConnection;
         SqlCommand command;
@@ -30,16 +32,6 @@ namespace ProjetFinal_CS_BourassaMarie
             C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
             Integrated Security=True");
 
-        }
-
-        private void textBoxUsername_TextChanged(object sender, EventArgs e)
-        {
-            labelLogin.Visible = false;
-        }
-
-        private void textBoxPassword_TextChanged(object sender, EventArgs e)
-        {
-            labelPassword.Visible = false;
         }
 
         private void buttonLogin_Click(object sender, EventArgs e)
@@ -86,29 +78,17 @@ namespace ProjetFinal_CS_BourassaMarie
             }
         }
 
-        private void labelPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelLogin_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            textBoxUsername.Text = "";
+            textBoxPassword.Text = "";
 
-        }
-
-        private void labelWelcome_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picBoxLogin_Click(object sender, EventArgs e)
-        {
-
+           DialogResult yesOrNo = MessageBox.Show("Do you really want to leave this app?", "ATTENTION", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if(yesOrNo == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

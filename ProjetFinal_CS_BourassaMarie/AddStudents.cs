@@ -22,6 +22,11 @@ namespace ProjetFinal_CS_BourassaMarie
         SqlCommand command;
         SqlDataReader reader;
 
+        private void connectToDb() { 
+        mydbCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=
+            C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
+            Integrated Security=True");
+    }
         private void buttonGenerateCode_Click(object sender, EventArgs e)
         {
             try
@@ -92,23 +97,26 @@ namespace ProjetFinal_CS_BourassaMarie
 
         private void fillCombo()
         {
-            comboBoxProgs.Items.Clear();
-            mydbCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=
-            C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
-            Integrated Security=True");
-
-            mydbCon.Open();
-
-            command = new SqlCommand("SELECT * FROM Programs", mydbCon);
-
-            reader = command.ExecuteReader();
-            while (reader.Read())
+            try
             {
-                comboBoxProgs.Items.Add(reader["NameProgram"].ToString());
-               
-            }
-            mydbCon.Close();
+                comboBoxProgs.Items.Clear();
+                connectToDb();
 
+                mydbCon.Open();
+
+                command = new SqlCommand("SELECT * FROM Programs", mydbCon);
+
+                reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    comboBoxProgs.Items.Add(reader["NameProgram"].ToString());
+
+                }
+                mydbCon.Close();
+            }catch(Exception e)
+            {
+                MessageBox.Show("I couldn't connect to the Database, please contact an administrator", "Attention!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
         }
 
@@ -130,9 +138,7 @@ namespace ProjetFinal_CS_BourassaMarie
 
         private void AddStudents_Load(object sender, EventArgs e)
         {
-            mydbCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=
-            C:\Users\TQY_06\Documents\ProjetFinal_CS_BourassaMarie\ProjetFinal_CS_BourassaMarie\FinalProjDB.mdf;
-            Integrated Security=True");
+            connectToDb();
         }
     }
 }

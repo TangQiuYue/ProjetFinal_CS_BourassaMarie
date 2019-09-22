@@ -118,8 +118,8 @@
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
-            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.quitToolStripMenuItem.Text = "Log Out";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
             // 
             // SystemDeGestion

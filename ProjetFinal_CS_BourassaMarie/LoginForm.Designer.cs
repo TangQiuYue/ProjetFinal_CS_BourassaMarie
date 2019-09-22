@@ -33,8 +33,6 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.labelLogin = new System.Windows.Forms.Label();
-            this.labelPassword = new System.Windows.Forms.Label();
             this.labelWelcome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogin)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +46,6 @@
             this.picBoxLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxLogin.TabIndex = 0;
             this.picBoxLogin.TabStop = false;
-            this.picBoxLogin.Click += new System.EventHandler(this.picBoxLogin_Click);
             // 
             // textBoxUsername
             // 
@@ -57,7 +54,6 @@
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.Size = new System.Drawing.Size(144, 27);
             this.textBoxUsername.TabIndex = 1;
-            this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
             // textBoxPassword
             // 
@@ -67,7 +63,6 @@
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(144, 27);
             this.textBoxPassword.TabIndex = 2;
-            this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
             // buttonLogin
             // 
@@ -92,32 +87,6 @@
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // labelLogin
-            // 
-            this.labelLogin.AutoSize = true;
-            this.labelLogin.BackColor = System.Drawing.Color.Transparent;
-            this.labelLogin.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogin.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.labelLogin.Location = new System.Drawing.Point(127, 181);
-            this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(46, 19);
-            this.labelLogin.TabIndex = 5;
-            this.labelLogin.Text = "Login";
-            this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
-            // 
-            // labelPassword
-            // 
-            this.labelPassword.AutoSize = true;
-            this.labelPassword.BackColor = System.Drawing.Color.Transparent;
-            this.labelPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.labelPassword.Location = new System.Drawing.Point(115, 225);
-            this.labelPassword.Name = "labelPassword";
-            this.labelPassword.Size = new System.Drawing.Size(74, 19);
-            this.labelPassword.TabIndex = 6;
-            this.labelPassword.Text = "Password";
-            this.labelPassword.Click += new System.EventHandler(this.labelPassword_Click);
-            // 
             // labelWelcome
             // 
             this.labelWelcome.AutoSize = true;
@@ -125,11 +94,10 @@
             this.labelWelcome.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWelcome.Location = new System.Drawing.Point(54, 21);
             this.labelWelcome.Name = "labelWelcome";
-            this.labelWelcome.Size = new System.Drawing.Size(203, 57);
+            this.labelWelcome.Size = new System.Drawing.Size(210, 57);
             this.labelWelcome.TabIndex = 7;
-            this.labelWelcome.Text = "Bienvenue au \r\nSystem de Gestion Étudiants\r\nÉcole Linguistica\r\n";
+            this.labelWelcome.Text = "Welcome to the\r\nStudent Management Tool of\r\nLinguistica School\r\n";
             this.labelWelcome.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.labelWelcome.Click += new System.EventHandler(this.labelWelcome_Click);
             // 
             // LoginForm
             // 
@@ -140,8 +108,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(283, 368);
             this.Controls.Add(this.labelWelcome);
-            this.Controls.Add(this.labelPassword);
-            this.Controls.Add(this.labelLogin);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonLogin);
             this.Controls.Add(this.textBoxPassword);
@@ -163,8 +129,6 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Label labelLogin;
-        private System.Windows.Forms.Label labelPassword;
         private System.Windows.Forms.Label labelWelcome;
     }
 }

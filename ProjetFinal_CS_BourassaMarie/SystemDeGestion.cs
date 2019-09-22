@@ -51,11 +51,6 @@ namespace ProjetFinal_CS_BourassaMarie
             }
         }
 
-        private void SystemDeGestion_FormClosed(object sender, FormClosedEventArgs e)
-        {
-          
-        }
-
         private void deleteAStudentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DeleteStudent delStudent = new DeleteStudent();
@@ -67,5 +62,6 @@ namespace ProjetFinal_CS_BourassaMarie
             ListStudents listStudents = new ListStudents();
             listStudents.ShowDialog();
         }
+        
     }
 }
